@@ -79,7 +79,7 @@ h1, h2, h3, h4, h5, h6, .navbar-brand { /* Semua heading + brand */
 
 /* Styling tombol custom */
 .btn-primary { /* Tombol primary */
-    background-color: var(--primary-dark); /* BG gelap */
+    background-color: #ffc107; /* BG gelap */
     border: 2px solid var(--primary-dark); /* Border gelap */
     padding: 10px 24px; /* Padding dalam */
     border-radius: 50px; /* Sudut bulat */
