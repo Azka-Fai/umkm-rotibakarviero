@@ -2,7 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap');
 
 :root { 
-    /* Palette Warna : Coklat Gelap, Emas, & Cream */ /* Tema warna coklat + emas */
     --primary-dark: #2d1b14;    
     --primary-light: #5d4037;  
     --accent-gold: #ffc107;     
@@ -11,7 +10,7 @@
     --shadow-soft: 0 10px 30px rgba(0,0,0,0.08); /* Bayangan halus */ 
 }
 
-body { /* Styling body keseluruhan */
+body { 
     background-color: var(--bg-cream); /* BG cream */
     color: var(--text-main); /* Warna teks default */
     font-family: 'Poppins', sans-serif;  /* Font sans-serif */
@@ -58,7 +57,7 @@ h1, h2, h3, h4, h5, h6, .navbar-brand { /* Semua heading + brand */
     border-radius: 0 0 50px 50px; /* Lengkungan bawah */ /* Sudut bulat bawah */
 }
 
-/* CARDS */ /* Styling card produk */
+/* CARDS */ 
 .card { /* Class card */
     border: none; /* Gak ada border */
     border-radius: 16px; /* Sudut bulat */
