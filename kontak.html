@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hubungi Kami - Roti Bakar Viero</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"rel="stylesheet"/>
+    <link rel="icon" href="images/icon.png" type="image/png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="#">
+          <i class="fas fa-bread-slice me-2"></i> Roti Bakar Viero
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto gap-3">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Beranda</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="tentang.html">Tentang</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="produk.html">Menu</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="galeri.html">Galeri</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="kontak.html">Kontak</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <section class="text-center py-5 mt-5">
+      <div class="container pt-4">
+        <h1 class="display-4 fw-bold">Layanan Pelanggan</h1>
+        <p class="text-muted">
+          Kritik, saran, atau sekadar sapa? Kami siap mendengar!
+        </p>
+      </div>
+    </section>
+
+    <div class="container pb-5">
+      <div class="row g-5">
+        <div class="col-lg-7">
+          <div class="card shadow-sm border-0 mb-4 p-2">
+            <div class="card-body">
+              <h3 class="fw-bold mb-3 text-warning">
+                <i class="fas fa-envelope me-2"></i> Kirim Pesan
+              </h3>
+              <form id="kontakForm" class="row g-3">
+                <div class="col-md-6">
+                  <label class="form-label small fw-bold text-secondary"
+                    >NAMA LENGKAP</label
+                  >
+                  <input
+                    type="text"
+                    id="nama"
+                    class="form-control"
+                    placeholder="Nama kamu"
+                    required
+                  />
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label small fw-bold text-secondary"
+                    >EMAIL</label
+                  >
+                  <input
+                    type="email"
+                    id="email"
+                    class="form-control"
+                    placeholder="email@gmail.com"
+                    required
+                  />
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label small fw-bold text-secondary"
+                    >NO. HP</label
+                  >
+                  <input type="text" id="hp" class="form-control" required placeholder="08xxxx" />
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label small fw-bold text-secondary"
+                    >TGL LAHIR</label
+                  >
+                  <input
+                    type="date"
+                    id="tanggal"
+                    class="form-control"
+                    required
+                  />
+                </div>
+                <div class="col-12">
+                  <label class="form-label small fw-bold text-secondary"
+                    >PESAN</label
+                  >
+                  <textarea
+                    id="pesan"
+                    class="form-control"
+                    rows="3"
+                    placeholder="Tulis pesanmu disini..."
+                  ></textarea>
+                </div>
+
+                <div class="mb-3 form-check">
+                  <input
+                    type="checkbox"
+                    id="langganan"
+                    name="langganan"
+                    value="ya"
+                    class="form-check-input"
+                  />
+                  <label for="langganan" class="form-check-label text-muted"
+                    >Saya ingin menerima newsletter</label
+                  >
+                </div>
+
+                <div class="col-12">
+                  <div class="row g-2">
+                    <div class="col-6">
+                      <button type="submit" class="btn btn-warning w-100 fw-bold">
+                        Kirim Pesan
+                      </button>
+                    </div>
+                    <div class="col-6">
+                      <button type="button" class="btn btn-warning w-100 fw-bold" id="clearBtn">
+                        Clear
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+              <div id="formFeedback" class="alert mt-3 d-none rounded-3"></div>
+            </div>
+          </div>
+
+          <div class="card shadow-sm border-0 bg-light">
+            <div class="card-body">
+              <h4 class="fw-bold mb-3">
+                <i class="fas fa-comment-alt me-2"></i> Testimoni
+              </h4>
+              <div class="input-group mb-3">
+                <input
+                  type="text"
+                  id="testiNama"
+                  class="form-control"
+                  placeholder="Nama"
+                />
+                <input
+                  type="text"
+                  id="testiIsi"
+                  class="form-control w-50"
+                  placeholder="Tulis testimoni kamu"
+                />
+                <button id="addTestimoni" class="btn btn-dark">Post</button>
+              </div>
+              <div id="testimoniList" class="row row-cols-1 g-2"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-5">
+          <div class="sticky-top" style="top: 100px; z-index: 1">
+            <div class="card shadow border-0 mb-4 bg-white">
+              <div class="card-header bg-warning text-dark fw-bold text-center">
+                <i class="fas fa-calculator me-2"></i> Simulasi Pesanan
+              </div>
+              <div class="card-body">
+                <div class="mb-3">
+                  <label class="form-label small fw-bold">PILIH MENU</label>
+                  <select id="jenisRoti" class="form-select">
+                    <option value="35000">Coklat Lumer - 35K</option>
+                    <option value="45500">Matcha Delight - 45.5K</option>
+                    <option value="48000">Keju Swiss - 48K</option>
+                    <option value="46000">Apple Pie - 46K</option>
+                    <option value="49000">Strawberry - 49K</option>
+                    <option value="48500">Smoked Beef - 48.5K</option>
+                  </select>
+                </div>
+                <div class="mb-3">
+                  <label class="form-label small fw-bold">JUMLAH PORSI</label>
+                  <input
+                    type="number"
+                    id="jumlahRoti"
+                    class="form-control"
+                    placeholder="0"
+                  />
+                </div>
+                <button id="hitungBtn" class="btn btn-dark w-100 fw-bold mb-3">
+                  Hitung Total
+                </button>
+
+                <div
+                  id="totalResult"
+                  class="alert alert-secondary d-none text-center"
+                ></div>
+              </div>
+            </div>
+
+            <div class="card shadow-sm border-0">
+              <div class="card-body">
+                <h5 class="fw-bold">Cek Kategori Usia</h5>
+                <div class="input-group">
+                  <input
+                    type="number"
+                    id="usiaInput"
+                    class="form-control"
+                    placeholder="Umur kamu..."
+                  />
+                  <button id="cekUsiaBtn" class="btn btn-outline-dark">
+                    Cek
+                  </button>
+                </div>
+                <div id="usiaResult" class="mt-2 fw-bold text-center"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        // ===========================================
+        // 1. FORM KONTAK - VALIDASI DAN SUBMIT
+        // ===========================================
+        // Menangani submit form kontak dengan validasi input
+        $("#kontakForm").submit(function (e) {
+          e.preventDefault(); // Mencegah reload halaman
+
+          // Ambil nilai input dan bersihkan spasi
+          let nama = $("#nama").val().trim();
+          let email = $("#email").val().trim();
+          let hp = $("#hp").val().trim();
+
+          let errorMessage = ""; // Variabel untuk menyimpan pesan error
+
+          // Validasi Nama: Hanya huruf dan spasi
+          if (!/^[a-zA-Z\s]+$/.test(nama)) {
+            errorMessage = '<i class="fas fa-user-times"></i> Nama asli dong! Jangan pake angka atau simbol aneh.';
+          }
+          // Validasi Email: Harus ada '@' dan berakhir '.com'
+          else if (!email.includes("@") || !email.endsWith(".com")) {
+            errorMessage = '<i class="fas fa-envelope-open-text"></i> Email harus valid dan pake domain .com ya!';
+          }
+          // Validasi No HP: Hanya angka, panjang 10-13 digit
+          else if (!/^[0-9]+$/.test(hp)) {
+            errorMessage = '<i class="fas fa-phone-slash"></i> No. HP isinya angka doang bro, jangan pake huruf!';
+          } else if (hp.length < 10 || hp.length > 13) {
+            errorMessage = '<i class="fas fa-mobile-alt"></i> No. HP kependekan atau kepanjangan (10-13 digit).';
+          }
+
+          // Jika ada error, tampilkan pesan error
+          if (errorMessage) {
+            $("#formFeedback")
+              .removeClass("d-none alert-success")
+              .addClass("alert-danger")
+              .html(errorMessage);
+            return; // Hentikan proses
+          }
+
+          // Jika valid, tampilkan pesan sukses dan reset form
+          $("#formFeedback")
+            .removeClass("d-none alert-danger")
+            .addClass("alert-success")
+            .html('<i class="fas fa-check-circle"></i> berhasil terkirim.');
+          $("#kontakForm")[0].reset(); // Reset form setelah sukses
+        });
+
+        // ===========================================
+        // 2. CHECKBOX NEWSLETTER
+        // ===========================================
+        // Menampilkan alert saat checkbox newsletter diklik
+        $("#langganan").change(function() {
+          if ($(this).is(':checked')) {
+            alert("Anda telah memilih untuk menerima newsletter.");
+          }
+        });
+
+        // ===========================================
+        // CLEAR BUTTON
+        // ===========================================
+        // Menghapus semua input form dan menyembunyikan feedback
+        $("#clearBtn").click(function() {
+          $("#kontakForm")[0].reset();
+          $("#formFeedback").addClass("d-none");
+        });
+
+        // ===========================================
+        // 3. CEK KATEGORI USIA
+        // ===========================================
+        // Menentukan kategori usia berdasarkan input
+        $("#cekUsiaBtn").click(function () {
+          let usia = parseInt($("#usiaInput").val());
+          if (isNaN(usia) || usia <= 0) {
+            $("#usiaResult").html('<span class="text-danger">Isi umur yang bener dong! 😭</span>');
+            return;
+          }
+          let kat = usia < 12 ? "Anak-anak" : usia <= 17 ? "Remaja" : usia <= 40 ? "Dewasa" : "Lansia";
+          $("#usiaResult").html(`<span class="text-success">Kamu termasuk: ${kat}</span>`);
+        });
+
+        // ===========================================
+        // 4. TESTIMONI
+        // ===========================================
+        // Menambah testimoni baru ke daftar
+        $("#addTestimoni").click(function () {
+          let nama = $("#testiNama").val();
+          let isi = $("#testiIsi").val();
+          if (nama && isi) {
+            $("#testimoniList").prepend(
+              `<div class="alert alert-light border-start border-warning border-4 shadow-sm mb-2">
+                <small class="fw-bold d-block text-warning">${nama}</small>${isi}
+              </div>`
+            );
+            $("#testiNama").val(""); // Kosongkan input
+            $("#testiIsi").val("");
+          }
+        });
+
+        // ===========================================
+        // 5. SIMULASI PESANAN
+        // ===========================================
+        // Menghitung total harga berdasarkan menu dan jumlah
+        $("#hitungBtn").click(function () {
+          let harga = parseInt($("#jenisRoti").val());
+          let jumlah = parseInt($("#jumlahRoti").val());
+          if (isNaN(jumlah) || jumlah <= 0) {
+            $("#totalResult")
+              .removeClass("d-none alert-success")
+              .addClass("alert-danger")
+              .text("Jumlah minimal 1 porsi!");
+            return;
+          }
+          let total = jumlah * harga;
+          $("#totalResult")
+            .removeClass("d-none alert-danger")
+            .addClass("alert-success")
+            .html(
+              `<strong>Subtotal:</strong> Rp ${total.toLocaleString()}<br>
+              <hr class="my-1">
+              <strong class="fs-5">Total: Rp ${total.toLocaleString()}</strong>`
+            );
+        });
+      });
+    </script>
+
+    <footer class="text-center text-white">
+      <div class="container">
+        <h3 class="fw-bold text-warning mb-4">Roti Bakar Viero</h3>
+        <p class="mb-4 text-white-50 w-75 mx-auto">
+          Kami berkomitmen menyajikan roti bakar terbaik dengan bahan premium
+          dan cinta di setiap potongannya.
+        </p>
+
+        <div class="mb-4">
+          <a
+            href="https://www.instagram.com/rotibakarviero/"
+            class="text-white me-3 fs-4"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a href="https://wa.me/6285771284197" class="text-white me-3 fs-4"
+            ><i class="fab fa-whatsapp"></i
+          ></a>
+          <a
+            href="https://www.tiktok.com/@rotibakarviero"
+            class="text-white fs-4"
+            ><i class="fab fa-tiktok"></i
+          ></a>
+        </div>
+
+        <p class="small text-white-50">
+          &copy; 2025 Roti Bakar Viero. All Rights Reserved.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

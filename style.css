@@ -1,0 +1,170 @@
+/* IMPORT FONT DARI GOOGLE */ /* Ambil font keren dari Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap');
+
+:root { /* Variabel CSS custom, biar gampang ganti warna */
+    /* Palette Warna : Coklat Gelap, Emas, & Cream */ /* Tema warna coklat + emas */
+    --primary-dark: #2d1b14;    /* Coklat Kopi Pahit */ /* Warna utama gelap */
+    --primary-light: #5d4037;   /* Coklat Susu */ /* Warna utama terang */
+    --accent-gold: #ffc107;     /* Emas Roti Bakar */ /* Aksen emas */
+    --text-main: #3e2723;       /* Teks utama */ /* Warna teks utama */
+    --bg-cream: #fdfbf7;        /* Background lembut (bukan putih polos) */ /* BG cream */
+    --shadow-soft: 0 10px 30px rgba(0,0,0,0.08); /* Bayangan halus */ /* Shadow lembut */
+}
+
+body { /* Styling body keseluruhan */
+    background-color: var(--bg-cream); /* BG cream */
+    color: var(--text-main); /* Warna teks default */
+    font-family: 'Poppins', sans-serif; /* Font body modern */ /* Font sans-serif */
+    overflow-x: hidden; /* Gak ada scroll horizontal */
+}
+
+/* TYPOGRAPHY (The Game Changer) */ /* Styling teks */
+h1, h2, h3, h4, h5, h6, .navbar-brand { /* Semua heading + brand */
+    font-family: 'Playfair Display', serif; /* Font judul elegan */ /* Font serif buat judul */
+    letter-spacing: -0.5px; /* Jarak huruf dikit */
+}
+
+/* NAVBAR */ /* Styling navbar */
+.navbar { /* Class navbar */
+    background: rgba(45, 27, 20, 0.95) !important; /* Semi transparan */ /* BG transparan */
+    backdrop-filter: blur(10px); /* Efek blur */
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1); /* Shadow */
+    padding: 1rem 0; /* Padding atas bawah */
+}
+
+.navbar-brand { /* Brand di navbar */
+    font-size: 1.5rem; /* Ukuran font */
+    color: var(--accent-gold) !important; /* Warna emas */
+}
+
+.nav-link { /* Link di navbar */
+    font-weight: 500; /* Tebal medium */
+    color: rgba(255,255,255,0.7) !important; /* Putih transparan */
+    transition: all 0.3s; /* Transisi smooth */
+}
+
+.nav-link:hover, .nav-link.active { /* Hover dan active */
+    color: var(--accent-gold) !important; /* Jadi emas */
+}
+
+/* HERO SECTION (Mewah) */ /* Section hero di atas */
+/* Pastikan ada file 'hero-bg.jpg' di folder images, atau ganti url-nya */ /* Pastiin gambar ada */
+.hero-section { /* Class hero */
+    background: linear-gradient(rgba(45, 27, 20, 0.7), rgba(45, 27, 20, 0.5)), url('images/produk1.jpg'); /* BG gradasi + gambar */
+    background-size: cover; /* Cover seluruh area */
+    background-position: center; /* Posisi tengah */
+    color: white; /* Teks putih */
+    padding: 120px 0; /* Padding atas bawah */
+    margin-bottom: 3rem; /* Margin bawah */
+    border-radius: 0 0 50px 50px; /* Lengkungan bawah */ /* Sudut bulat bawah */
+}
+
+/* CARDS */ /* Styling card produk */
+.card { /* Class card */
+    border: none; /* Gak ada border */
+    border-radius: 16px; /* Sudut bulat */
+    background: #fff; /* BG putih */
+    box-shadow: var(--shadow-soft); /* Shadow lembut */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transisi smooth */
+    overflow: hidden; /* Biar gambar gak keluar */
+}
+
+.card:hover { /* Hover card */
+    transform: translateY(-5px); /* Naik dikit pas hover */ /* Efek naik */
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15); /* Shadow lebih besar */
+}
+
+.card-title { /* Judul card */
+    color: var(--primary-dark); /* Warna gelap */
+    font-weight: 700; /* Tebal banget */
+}
+
+/* BUTTONS (Custom Style) */ /* Styling tombol custom */
+.btn-primary { /* Tombol primary */
+    background-color: var(--primary-dark); /* BG gelap */
+    border: 2px solid var(--primary-dark); /* Border gelap */
+    padding: 10px 24px; /* Padding dalam */
+    border-radius: 50px; /* Tombol bulat */ /* Sudut bulat */
+    transition: all 0.3s; /* Transisi */
+}
+
+.btn-primary:hover { /* Hover primary */
+    background-color: transparent; /* BG transparan */
+    color: var(--primary-dark); /* Teks gelap */
+}
+
+.btn-warning { /* Tombol warning */
+    background-color: var(--accent-gold); /* BG emas */
+    color: var(--primary-dark); /* Teks gelap */
+    border: none; /* Gak ada border */
+    padding: 10px 24px; /* Padding */
+    border-radius: 50px; /* Bulat */
+    font-weight: 700; /* Tebal */
+}
+
+/* GALERI (Grid System) */ /* Styling galeri grid */
+.galeri { /* Class galeri */
+    display: grid; /* Grid layout */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Kolom otomatis */
+    gap: 30px; /* Jarak antar item */
+    padding: 20px; /* Padding dalam */
+}
+
+.galeri-card { /* Card di galeri */
+    position: relative; /* Wajib ada biar nama produk gak lari */ /* Posisi relatif */
+    border-radius: 16px; /* Sudut bulat */
+    overflow: hidden; /* Biar gambar gak keluar */
+    cursor: pointer; /* Biar kursor jadi jari telunjuk */ /* Cursor pointer */
+}
+
+.galeri-card img { /* Gambar di galeri */
+    height: 250px; /* Tinggi gambar */
+    width: 100%; /* Lebar full */
+    object-fit: cover; /* Cover area */
+    transition: transform 0.5s ease; /* Transisi zoom */
+}
+
+/* Efek Zoom pas disentuh/hover */ /* Efek zoom */
+.galeri-card:hover img { /* Hover gambar */
+    transform: scale(1.1); /* Zoom dikit biar dramatis */ /* Scale 1.1 */
+}
+
+/* Style Nama Produk */ /* Styling nama produk */
+.nama-produk { /* Class nama produk */
+    position: absolute; /* Absolut */
+    bottom: 0; /* Di bawah */
+    left: 0; /* Kiri */
+    width: 100%; /* Lebar full */
+    padding: 20px; /* Padding */
+    background: linear-gradient(to top, rgba(45, 27, 20, 0.9), transparent); /* Gradasi gelap */ /* BG gradasi */
+    color: #fff; /* Teks putih biar kontras */ /* Teks putih */
+    font-family: 'Playfair Display', serif; /* Font serif */
+    font-size: 1.2rem; /* Ukuran font */
+    text-align: center; /* Tengah */
+    
+    /* Sembunyikan dulu */ /* Hidden dulu */
+    opacity: 0; /* Opacity 0 */
+    transform: translateY(20px); /* Geser bawah */
+    transition: all 0.4s ease-out; /* Transisi */
+}
+
+.galeri-card:hover .nama-produk, /* Hover card */
+.galeri-card.active .nama-produk { /* Active card */
+    opacity: 1; /* Muncul */
+    transform: translateY(0); /* Geser ke posisi */
+}
+
+/* FOOTER */ /* Styling footer */
+footer { /* Tag footer */
+    background-color: var(--primary-dark) !important; /* BG gelap */
+    padding-top: 3rem; /* Padding atas */
+    padding-bottom: 3rem; /* Padding bawah */
+    margin-top: 5rem; /* Margin atas */
+    border-top: 4px solid var(--accent-gold); /* Border emas atas */
+}
+
+/* Form Styles */ /* Styling form */
+.form-control:focus { /* Focus input */
+    border-color: var(--primary-light); /* Border coklat */
+    box-shadow: 0 0 0 0.2rem rgba(93, 64, 55, 0.25); /* Shadow coklat */
+}

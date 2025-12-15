@@ -1,0 +1,127 @@
+<!DOCTYPE html> <!-- HTML5 doctype -->
+<html lang="id"> <!-- Bahasa Indonesia -->
+  <head> <!-- Head section -->
+    <meta charset="UTF-8" /> <!-- Encoding UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Responsive -->
+    <title>Galeri - Roti Bakar Viero</title> <!-- Judul halaman -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"rel="stylesheet"/> <!-- Bootstrap CSS -->
+    <link rel="icon" href="images/icon.png" type="image/png" /> <!-- Icon favicon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/> <!-- Font Awesome -->
+    <link rel="stylesheet" href="style.css" /> <!-- CSS custom -->
+  </head>
+
+  <body> <!-- Body website -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top"> <!-- Navbar fixed -->
+      <div class="container"> <!-- Container -->
+        <a class="navbar-brand fw-bold" href="#"> <!-- Brand link -->
+          <i class="fas fa-bread-slice me-2"></i> Roti Bakar Viero <!-- Icon + nama -->
+        </a>
+        <button
+          class="navbar-toggler" <!-- Toggler button -->
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span> <!-- Icon toggler -->
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav"> <!-- Collapsible menu -->
+          <ul class="navbar-nav ms-auto gap-3"> <!-- Nav list -->
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Beranda</a> <!-- Link beranda -->
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="tentang.html">Tentang</a> <!-- Link tentang -->
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="produk.html">Menu</a> <!-- Link menu -->
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="galeri.html">Galeri</a> <!-- Link galeri aktif -->
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="kontak.html">Kontak</a> <!-- Link kontak -->
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <section class="text-center py-5 mt-5"> <!-- Section header galeri -->
+      <div class="container pt-3">
+        <h1 class="display-4 fw-bold">The Viero Experience</h1> <!-- Judul besar -->
+        <p class="text-muted"> <!-- Deskripsi -->
+          Rasakan Pengalaman Lezat & Unik di Setiap Potongan Roti Bakar Kami 📸
+        </p>
+      </div>
+    </section>
+
+    <div class="container pb-5"> <!-- Container galeri -->
+      <div class="galeri"> <!-- Grid galeri -->
+        <div class="galeri-card card"> <!-- Card galeri 1 -->
+          <img src="images/viero (1).png" class="gallery-img" alt="Coklat" /> <!-- Gambar -->
+          <div class="nama-produk">The Grand Celebration</div> <!-- Nama produk -->
+        </div>
+
+        <div class="galeri-card card"> <!-- Card galeri 2 -->
+          <img src="images/viero (2).png" class="gallery-img" alt="Matcha" />
+          <div class="nama-produk">Smoke Beef Extra Gold</div>
+        </div>
+
+        <div class="galeri-card card"> <!-- Card galeri 3 -->
+          <img src="images/viero (3).png" class="gallery-img" alt="Keju" />
+          <div class="nama-produk">The Master at Work</div>
+        </div>
+
+        <div class="galeri-card card"> <!-- Card galeri 4 -->
+          <img src="images/viero (4).png" class="gallery-img" alt="Apple Pie" />
+          <div class="nama-produk">The Global Vision</div>
+        </div>
+
+        <div class="galeri-card card"> <!-- Card galeri 5 -->
+          <img src="images/viero (5).png" class="gallery-img" alt="Strawberry" />
+          <div class="nama-produk">Fine Dining Atmosphere</div>
+        </div>
+
+        <div class="galeri-card card"> <!-- Card galeri 6 -->
+          <img src="images/viero (6).png" class="gallery-img" alt="Beef" />
+          <div class="nama-produk">The Golden Treasure</div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="text-center text-white"> <!-- Footer -->
+      <div class="container">
+        <h3 class="fw-bold text-warning mb-4">Roti Bakar Viero</h3> <!-- Nama brand -->
+        <p class="mb-4 text-white-50 w-75 mx-auto"> <!-- Deskripsi -->
+          Kami berkomitmen menyajikan roti bakar terbaik dengan bahan premium
+          dan cinta di setiap potongannya.
+        </p>
+
+        <div class="mb-4"> <!-- Sosmed -->
+          <a
+            href="https://www.instagram.com/rotibakarviero/"
+            class="text-white me-3 fs-4"
+            ><i class="fab fa-instagram"></i <!-- IG -->
+          ></a>
+          <a href="https://wa.me/6285771284197" class="text-white me-3 fs-4"
+            ><i class="fab fa-whatsapp"></i <!-- WA -->
+          ></a>
+          <a
+            href="https://www.tiktok.com/@rotibakarviero"
+            class="text-white fs-4"
+            ><i class="fab fa-tiktok"></i <!-- TikTok -->
+          ></a>
+        </div>
+
+        <p class="small text-white-50"> <!-- Copyright -->
+          &copy; 2025 Roti Bakar Viero. All Rights Reserved.
+        </p>
+      </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script> <!-- jQuery -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script> <!-- Bootstrap JS -->
+    <script src="galeri.js"></script> <!-- Script galeri -->
+    
+  </body>
+</html>
